@@ -17,11 +17,10 @@ class MarkovMachine {
 
   }
   //   /** set markov chains:
-  //    *
   //    *  for text of "the cat in the hat", chains will be
   //    *  {"the": ["cat", "hat"], "cat": ["in"], "in": ["the"], "hat": [null]} */
 
-  makeChains() {
+  makeChains = () => {
 
     const markovChain = {}
     for (let i = 0; i < this.textArr.length; i++) {
@@ -33,12 +32,13 @@ class MarkovMachine {
         markovChain[word].push(this.textArr[i + 1].toLowerCase().replace(/[\W_]/, ""));
       }
     }
+    return markovChain;
   }
   //   /** return random text from chains */
-  words = Object.keys(this.makeChains(this.textArr))
 
-  makeText() {
 
+  makeText = () => {
+    words = Object.keys(this.makeChains(this.textArr))
     let word = words[Math.floor(Math.random() * words.length)]
     let result = ''
     for (let i = 0; i < words.length; i++) {
