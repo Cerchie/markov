@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Cerchie/markov/issues"
   },
-  "homepage": "https://github.com/Cerchie/markov#readme"
+  "homepage": "https://github.com/Cerchie/markov#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "fs": "0.0.1-security",
+    "process": "^0.11.10",
+    "valid-url": "^1.0.9"
+  }
 }
